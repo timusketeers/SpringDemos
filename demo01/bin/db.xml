@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="propConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>file:F:/PA-workspace/SpringV2Demo/conf.properties</value>
+		</property>
+	</bean>
+	
+	<bean id="dataSource" class="${oracle.datasource.class}" destroy-method="close">
+		<property name="driverClassName" value="${server.db.driver}" />
+		<property name="url" value="${server.db.cache.url}" />
+		<property name="username" value="${server.db.cache.username}" />
+		<property name="password" value="${server.db.cache.password}" />
+		<property name="maxWait" value="4" />
+		<property name="maxActive" value="15" />
+		<property name="validationQuery" value="select 1 from dual" />
+		<property name="initialSize" value="6" />
+		<property name="minIdle" value="2" />
+		<property name="maxIdle" value="4" />
+		<property name="testOnBorrow" value="true" />
+		<property name="testOnReturn" value="true" />
+		<property name="testWhileIdle" value="true" />
+		
+		<!-- 释放连接. -->
+		<property name="removeAbandoned" value="false" />
+		<property name="removeAbandonedTimeout" value="3000" />
+		<property name="logAbandoned" value="true" />
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<property name="minEvictableIdleTimeMillis" value="60000" />
+	</bean>
+</beans>

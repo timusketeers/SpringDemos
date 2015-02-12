@@ -1,0 +1,7 @@
+这个例子说明了spring配置文件动态配置属性.例如:
+
+1.${server.db.cache.username}的用法
+
+2.org.springframework.beans.factory.config.PropertyPlaceholderConfigurer这个BeanFactoryPostProcessor的用法.
+
+PropertyPlaceholderConfigurer是BeanFactoryPostProcessor的子类.

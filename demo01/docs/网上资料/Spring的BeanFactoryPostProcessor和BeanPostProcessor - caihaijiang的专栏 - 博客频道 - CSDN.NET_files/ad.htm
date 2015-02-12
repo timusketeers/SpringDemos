@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)http://blog.csdn.net/common/ad.html?t=12&containerId=ad_commend&frmId=ad_frm_2 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CSDN Ad</title>
+    <style type="text/css">
+        body { margin:0px; padding:0px;}
+    </style>
+     <script src="jquery.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="div1"><style type="text/css">
+ul { margin:0px; padding:0 4px 0 0; }
+ul, x:-moz-any-link, x:default { width:90%; }
+ul li { padding:3px 0px;}
+a { font-size:12px; text-decoration:none; color:#006699; }
+a:hover { color:#000; }
+</style>
+
+<ul>
+
+<li><a href="http://blog.csdn.net/whqet/article/details/43449045" target="_blank">* 纯CSS实现表单验证</a></li>
+
+<li><a href="http://blog.csdn.net/whqet/article/details/43601051" target="_blank">* 段落文字彩条效果</a></li>
+
+<li><a href="http://blog.csdn.net/ebay/article/details/43529411" target="_blank">* Kepler性能分析之M2E调优</a></li>
+
+<li><a href="http://blog.csdn.net/bboyfeiyu/article/details/43645021" target="_blank">* 公共技术点之 Java反射 Reflection</a></li>
+
+
+<li><a href="http://blog.csdn.net/foruok/article/details/43499347" target="_blank">* QtAndroid详解(2)：startActivity和它的小伙伴们</a></li>
+
+
+
+<li><a href="http://blog.csdn.net/cloud_castle/article/details/43490767" target="_blank">* Qt5官方demo解析集34——Concentric Circles Example</a></li>
+
+
+</ul></div>
+<script type="text/javascript">
+    window.onload = function () {
+        if (document.domain != 'blog.csdn.net') {
+            document.domain = "csdn.net";
+        }
+        //这种给广告区域赋值的方式，对于有些JS广告不能完美的显示
+        //top.document.getElementById('ad_commend').innerHTML = document.getElementById('div1').innerHTML;
+
+        var h = document.body.offsetHeight + 2;
+        setTimeout(function () {
+            if (h > 800) h = document.getElementById('div1').offsetHeight + 4;
+            try { top.document.getElementById('ad_frm_2').style.height = h + 'px'; }
+            catch (err) { }
+        }, 100);
+    };
+    $(function() {
+        $("#div1 a").click(function() {
+            top._gaq.push(['_trackEvent', 'function', 'onclick', 'blog_articles_tuijianwenzhang']);
+        });
+    });
+</script>
+
+
+</body></html>
